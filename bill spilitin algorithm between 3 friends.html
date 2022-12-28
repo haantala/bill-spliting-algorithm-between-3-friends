@@ -1,0 +1,145 @@
+<html>
+    <body>
+        
+          <input type="text" id="food" placeholder="food" />
+          <input type="text" id="price" placeholder="price" />
+         <button onclick="add()">=</button>
+         <button onclick="add1()">f1</button>
+         <button onclick="add2()">f2</button>
+         <button onclick="add3()">f3</button>
+          <table id="dtable">
+            <thead>
+              <tr>
+                <th id="tfood">food</th>
+                <th id="tprice">price</th>
+                <th id="tf1">f1</th>
+                <th id="tf2">f2</th>
+                <th id="tf3">f3</th>
+         </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </body>
+    <script>
+
+      //for equal payment
+        function add() {
+            const food = document.getElementById('food').value;
+            const price = document.getElementById('price').value;
+            const f1 = document.getElementById('price').innerHTML=price/3;
+            const f2 = document.getElementById("price").innerHTML=price/3;
+            const f3 = document.getElementById('price').innerHTML=price/3;
+            
+            
+const tbody = document.querySelector('#dtable tbody');
+            tbody.appendChild(createRow(food, price,f1,f2,f3));
+          }
+          function createRow(food, price,f1,f2,f3) {
+            const tr = document.createElement('tr');
+            tr.appendChild(createTd(food));
+            tr.appendChild(createTd(price));
+            tr.appendChild(createTd(f1));
+            tr.appendChild(createTd(f2));
+            tr.appendChild(createTd(f3));
+          
+            return tr;
+          }
+          
+          function createTd(value) {
+            const td = document.createElement('td');
+            td.innerText = value;
+            return td;
+
+          //for friend 1
+          }
+          function add1() {
+            const food = document.getElementById('food').value;
+            const price = document.getElementById('price').value;
+            const f1 = document.getElementById('price').innerHTML=price;
+            const f2 = document.getElementById("price").innerHTML=0;
+            const f3 = document.getElementById('price').innerHTML=0;
+            
+            
+const tbody = document.querySelector('#dtable tbody');
+            tbody.appendChild(createRow(food, price,f1,f2,f3));
+          }
+          function createRow(food, price,f1,f2,f3) {
+            const tr = document.createElement('tr');
+            tr.appendChild(createTd(food));
+            tr.appendChild(createTd(price));
+            tr.appendChild(createTd(f1));
+            tr.appendChild(createTd(f2));
+            tr.appendChild(createTd(f3));
+          
+            return tr;
+          }
+          
+          function createTd(value) {
+            const td = document.createElement('td');
+            td.innerText = value;
+            return td;
+          }
+
+          //for friend 2
+          function add2() {
+            const food = document.getElementById('food').value;
+            const price = document.getElementById('price').value;
+            const f1 = document.getElementById('price').innerHTML=0;
+            const f2 = document.getElementById("price").value;
+            const f3 = document.getElementById('price').innerHTML=0;
+            
+            
+const tbody = document.querySelector('#dtable tbody');
+            tbody.appendChild(createRow(food, price,f1,f2,f3));
+          }
+          function createRow(food, price,f1,f2,f3) {
+            const tr = document.createElement('tr');
+            tr.appendChild(createTd(food));
+            tr.appendChild(createTd(price));
+            tr.appendChild(createTd(f1));
+            tr.appendChild(createTd(f2));
+            tr.appendChild(createTd(f3));
+          
+            return tr;
+          }
+          
+          function createTd(value) {
+            const td = document.createElement('td');
+            td.innerText = value;
+            return td;
+          }
+          //for friend 3
+          function add3() {
+            const food = document.getElementById('food').value;
+            const price = document.getElementById('price').value;
+            const f1 = document.getElementById('price').innerHTML-0;
+            const f2 = document.getElementById("price").innerHTML-0;  
+            const f3 = document.getElementById('price').innerHTML= price;
+           
+             
+            
+            
+const tbody = document.querySelector('#dtable tbody');
+            tbody.appendChild(createRow(food, price,f1,f2,f3));
+          }
+          function createRow(food, price,f1,f2,f3) {
+            const tr = document.createElement('tr');
+            tr.appendChild(createTd(food));
+            tr.appendChild(createTd(price));
+            tr.appendChild(createTd(f1));
+            tr.appendChild(createTd(f2));
+            tr.appendChild(createTd(f3));
+          
+            return tr;
+          }
+          
+          function createTd(value) {
+            const td = document.createElement('td');
+            td.innerText = value;
+            return td;
+          }
+          
+         
+    </script>
+</html>
